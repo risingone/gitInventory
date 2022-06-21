@@ -24,12 +24,12 @@
         type = tr.getElementsByTagName("td")[1].innerText;
         brand = tr.getElementsByTagName("td")[2].innerText;
         os = tr.getElementsByTagName("td")[3].innerText;
-        console.log(id, type, brand, os);
+        // console.log(id, type, brand, os);
         typeEdit.value = type;
         brandEdit.value = brand;
         osEdit.value = os;
         idEdit.value = id;
-        console.log(id);
+        // console.log(id);
         $('#editModal').modal('toggle');
       })
     })
@@ -37,10 +37,21 @@
     deletes = document.getElementsByClassName('delete');
     Array.from(deletes).forEach((element)=>{
       element.addEventListener("click", (e)=>{
-        console.log("delete ");
+        // console.log("delete ");
         idDelete.value = e.target.id.substr(1);
         console.log(idDelete.value);
         $('#deleteModal').modal('toggle');
       })
     })
+     
+    operations = document.getElementsByClassName('operation');
+    Array.from(operations).forEach((element)=>{
+      element.addEventListener("click", (e)=>{
+        console.log("assign or retrieve ");
+        // idDelete.value = e.target.id.substr(1);
+        // console.log(idDelete.value);
+        // $('#deleteModal').modal('toggle');
+      })
+    })
+
   </script>

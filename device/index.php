@@ -69,7 +69,7 @@
               <td>". $row['brand'] ."</td>
               <td>". $row['os'] ."</td>
               <td>".   $status    ."</td>
-              <td> <button class='edit btn btn-sm btn-primary' >Edit</button> <button class='delete btn btn-sm btn-primary' id=d". $row['id'] .">Delete</button> <button class='op btn btn-sm btn-primary' id=". $row['id'] .">". $operation. "</button> </td>
+              <td> <button class='edit btn btn-sm btn-primary' >Edit</button> <button class='delete btn btn-sm btn-primary' id=d". $row['id'] .">Delete</button> <button class='operation btn btn-sm btn-primary' id=". $row['id'] .">". $operation. "</button> </td>
               </tr>";
             }
         ?>
