@@ -37,9 +37,9 @@
     deletes = document.getElementsByClassName('delete');
     Array.from(deletes).forEach((element)=>{
       element.addEventListener("click", (e)=>{
-        // console.log("delete ");
+        console.log("delete ");
         idDelete.value = e.target.id.substr(1);
-        console.log(idDelete.value);
+        // console.log(idDelete.value);
         $('#deleteModal').modal('toggle');
       })
     })
@@ -47,10 +47,16 @@
     operations = document.getElementsByClassName('operation');
     Array.from(operations).forEach((element)=>{
       element.addEventListener("click", (e)=>{
-        console.log("assign or retrieve ");
-        // idDelete.value = e.target.id.substr(1);
-        // console.log(idDelete.value);
-        // $('#deleteModal').modal('toggle');
+        // console.log(e.target.id,e.target.innerText);
+        if(e.target.innerText==="Assign"){
+          idAssign.value = e.target.id;
+          console.log(idAssign.value);
+          $('#assignModal').modal('toggle');
+        } else{
+          idRetrieve.value = e.target.id;
+          console.log(idRetrieve.value);
+          $('#retrieveModal').modal('toggle');
+        }
       })
     })
 

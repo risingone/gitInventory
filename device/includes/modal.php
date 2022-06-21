@@ -6,7 +6,7 @@
         <h5 class="modal-title" id="newModalLabel">Add New Device</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/inventory/device/index.php" method="post">
+      <form action="/gitInventory/device/index.php" method="post">
       <div class="modal-body">
       <div class="mb-3">
         <label for="id" class="form-label">Device Id</label>
@@ -42,7 +42,7 @@
         <h5 class="modal-title" id="editModalLabel">Edit Device Details</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/inventory/device/index.php" method="POST">
+      <form action="/gitInventory/device/index.php" method="POST">
       <div class="modal-body">
           <input type="hidden" name="idEdit" id="idEdit">
           <div class="mb-3">
@@ -75,7 +75,7 @@
         <h5 class="modal-title" id="deleteModalLabel">Are you sure that you want to delete this Employee?</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/inventory/device/index.php" method="POST">
+      <form action="/gitInventory/device/index.php" method="POST">
       <div class="modal-body">
           <input type="hidden" name="idDelete" id="idDelete">
           <p>Remember you won't be able to recover it!</p>
@@ -83,6 +83,53 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-bs-dismiss="modal">GO BACK</button>
         <button type="submit" class="btn btn-danger">DELETE</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--Assign Modal-->
+<div class="modal fade" id="assignModal" tabindex="-1" aria-labelledby="assignModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="assignModalLabel">Please Enter ID of Employee to assign this device?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/gitInventory/device/index.php" method="POST">
+      <div class="modal-body">
+        <input type="hidden" name="idAssign" id="idAssign">
+        <div class="mb-3">
+            <label for="empId" class="form-label">Enter Employee Id</label>
+            <input type="text" class="form-control" id="empId" name="empId" aria-describedby="id of Employee">
+        </div>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Not Sure</button>
+        <button type="submit" class="btn btn-success">Assign</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--Retrieve Modal-->
+<div class="modal fade" id="retrieveModal" tabindex="-1" aria-labelledby="retrieveModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="retrieveModalLabel">Are you sure about retrieving this device?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/gitInventory/device/index.php" method="POST">
+      <div class="modal-body">
+        <input type="hidden" name="idRetrieve" id="idRetrieve">
+        <p>Please check the condition of the retrieved device!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Not Sure</button>
+        <button type="submit" class="btn btn-success">Retrieve</button>
       </div>
       </form>
     </div>

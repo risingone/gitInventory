@@ -8,26 +8,30 @@
 <?php
     if($insert){
       echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-      <strong>Success!</strong> Your device has been inserted succesfully!.
+      <strong>Success!</strong> The device has been inserted succesfully!.
       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
       </div>";
-    }
-  ?>
-  <?php
-    if($update){
+    } else if($update){
       echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-      <strong>Success!</strong> Your device has been updated succesfully!.
+      <strong>Success!</strong> The device has been updated succesfully!.
       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
       </div>";
-    }
-  ?>
-  <?php
-    if($delete){
+    } else if($delete){
       echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
-      <strong>Success!</strong> Your device has been deleted succesfully!.
+      <strong>Success!</strong> The device has been deleted succesfully!.
       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
       </div>";
-    }
+    } else if($assign){
+      echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+      <strong>Success!</strong> The device has been assigned succesfully!.
+      <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+      </div>";
+    } else if($retrieve){
+      echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+      <strong>Success!</strong> The device has been retrieved succesfully!.
+      <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+      </div>";
+    } 
   ?>
   <?php
     include('includes/modal.php');

@@ -2,6 +2,8 @@
     $insert = false;
     $update = false;
     $delete = false;
+    $assign = false;
+    $retrieve = false;
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -42,6 +44,29 @@
         } else{
           echo "We failed to delete the record! <br>";
         }
+    } else if(isset( $_POST['idAssign'] )){
+      // Delete the record
+      $id = $_POST['idAssign'];
+      $empId = $_POST['empId'];
+      $sql = "UPDATE `devices` SET `pan` = '$empId' WHERE `devices`.`id` = '$id'";
+      
+      $res = mysqli_query($conn, $sql);
+      if($res){
+        $assign = true;
+      } else{
+        echo "Sorry! We failed to assign the device! <br>";
+      }
+    }else if(isset( $_POST['idRetrieve'] )){
+      // Delete the record
+      $id = $_POST['idRetrieve'];
+      $sql = "UPDATE `devices` SET `pan` = NULL WHERE `devices`.`id` = '$id'";
+      
+      $res = mysqli_query($conn, $sql);
+      if($res){
+        $retrieve = true;
+      } else{
+        echo "Sorry! We failed to assign the device! <br>";
+      }
     } else{
       $id = $_POST['id'];
       $type = $_POST['type'];
