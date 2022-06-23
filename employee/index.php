@@ -66,7 +66,7 @@
               <td>". $row['mail'] ."</td>
               <td>". $row['mobile'] ."</td>
               <td>".   $status    ."</td>
-              <td> <button class='edit btn btn-sm btn-primary' id=". $row['pan'] .">Edit</button> <button class='delete btn btn-sm btn-primary' id=d". $row['pan'] .">Delete</button> </td>
+              <td> <button class='edit btn btn-sm btn-primary' id=". $row['pan'] .">Edit</button> <button class='delete btn btn-sm btn-primary' id=d". $row['pan'] .">Delete</button></td>
               </tr>";
             }
         ?>

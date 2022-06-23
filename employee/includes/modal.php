@@ -6,7 +6,7 @@
         <h5 class="modal-title" id="newModalLabel">Add New Employee</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/inventory/employee/index.php" method="post">
+      <form action="/gitInventory/employee/index.php" method="post">
       <div class="modal-body">
       <div class="mb-3">
         <label for="pan" class="form-label">PanCard No</label>
@@ -46,7 +46,7 @@
         <h5 class="modal-title" id="editModalLabel">Edit Employee Details</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/inventory/employee/index.php" method="POST">
+      <form action="/gitInventory/employee/index.php" method="POST">
       <div class="modal-body">
           <input type="hidden" name="panEdit" id="panEdit">
           <div class="mb-3">
@@ -83,7 +83,7 @@
         <h5 class="modal-title" id="deleteModalLabel">Are you sure that you want to delete this Employee?</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="/inventory/employee/index.php" method="POST">
+      <form action="/gitInventory/employee/index.php" method="POST">
       <div class="modal-body">
           <input type="hidden" name="panDelete" id="panDelete">
           <p>Remember you won't be able to recover it!</p>
@@ -96,3 +96,5 @@
     </div>
   </div>
 </div>
+
+

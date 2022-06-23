@@ -39,6 +39,7 @@
     
   <!-- Table -->
   <button class="add btn btn-primary">Add Device</button>
+  <button class="check btn btn-primary">Check</button>
   <div class="container my-4">
     <table class="table" id="myTable">
       <thead>
@@ -55,7 +56,11 @@
       </thead>
       <tbody>
       <?php 
-            $sql = "SELECT * FROM `devices`";
+            if($check){
+              $sql = "SELECT * FROM `devices` WHERE `devices`.`pan` = '$id'";
+            } else{
+              $sql = "SELECT * FROM `devices`";
+            }
             $result = mysqli_query($conn, $sql);
             $sno = 0;
             while($row = mysqli_fetch_assoc($result)){

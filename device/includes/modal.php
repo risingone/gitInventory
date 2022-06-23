@@ -135,3 +135,27 @@
     </div>
   </div>
 </div>
+
+<!--Check Modal-->
+<div class="modal fade" id="checkModal" tabindex="-1" aria-labelledby="checkModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="checkModalLabel">Enter Employee ID of employee</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form action="/gitInventory/device/index.php" method="POST">
+      <div class="modal-body">
+      <div class="mb-3">
+        <label for="empID" class="form-label">Employee Id</label>
+        <input type="text" class="form-control" id="empID" name="empID" aria-describedby="Employee id">
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">GO BACK</button>
+        <button type="submit" class="btn btn-success">CHECK</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>

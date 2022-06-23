@@ -44,4 +44,5 @@
         $('#deleteModal').modal('toggle');
       })
     })
+
   </script>

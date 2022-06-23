@@ -15,6 +15,14 @@
       })
     })
 
+    checks = document.getElementsByClassName('check');
+    Array.from(checks).forEach((element)=>{
+      element.addEventListener("click", (e)=>{
+        console.log("check ");
+        $('#checkModal').modal('toggle');
+      })
+    })
+
     edits = document.getElementsByClassName('edit');
     Array.from(edits).forEach((element)=>{
       element.addEventListener("click", (e)=>{
