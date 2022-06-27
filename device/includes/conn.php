@@ -21,9 +21,10 @@
    // insert new employee data
    if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(isset( $_POST['empID'])){
+      // Check Devices Assigned
         $id = $_POST['empID'];
         $check=true;
-    }else if(isset( $_POST['idEdit'] )){
+    } else if(isset( $_POST['idEdit'] )){
       // Update the record
       $id = $_POST['idEdit'];
       $type = $_POST['typeEdit'];
@@ -58,6 +59,8 @@
       $res2 = mysqli_query($conn, $sql2);
       if($res&&$res2){
         $assign = true;
+        // header("Location: http://localhost/gitInventory/device/index.php", TRUE, 301);
+        // exit();
       } else{
         echo "Sorry! We failed to assign the device! <br>";
       }

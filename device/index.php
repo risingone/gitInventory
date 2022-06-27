@@ -38,8 +38,9 @@
   ?>
     
   <!-- Table -->
-  <button class="add btn btn-primary">Add Device</button>
-  <button class="check btn btn-primary">Check</button>
+  <button class="add btn btn-primary">Add New Device</button>
+  <button class="check btn btn-primary">Check Assigned Devices</button>
+  <button class="log btn btn-primary">Check Device History</button>
   <div class="container my-4">
     <table class="table" id="myTable">
       <thead>

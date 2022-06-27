@@ -23,6 +23,14 @@
       })
     })
 
+    logs = document.getElementsByClassName('log');
+    Array.from(logs).forEach((element)=>{
+      element.addEventListener("click", (e)=>{
+        console.log("history ");
+        $('#logModal').modal('toggle');
+      })
+    })
+
     edits = document.getElementsByClassName('edit');
     Array.from(edits).forEach((element)=>{
       element.addEventListener("click", (e)=>{
