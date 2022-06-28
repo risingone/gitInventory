@@ -1,8 +1,14 @@
-
+<?php
+    session_start();
+    if(!isset($_SESSION['loggedin'])|| $_SESSION['loggedin']!=true){
+        header("location: ../login.php");
+        exit;
+    }
+?>
 <?php 
     include('includes/conn.php');
     include('includes/header.php');
-    include('includes/navbar.php');
+    // include('includes/navbar.php');
 ?>  
 
 <?php
@@ -38,9 +44,11 @@
   ?>
     
   <!-- Table -->
-  <button class="add btn btn-primary">Add New Device</button>
-  <button class="check btn btn-primary">Check Assigned Devices</button>
-  <button class="log btn btn-primary">Check Device History</button>
+  <div class="container my-4 d-flex justify-content-around">
+      <button class="add btn btn-primary">Add New Device</button>
+      <button class="check btn btn-primary">Check Assigned Devices</button>
+      <button class="log btn btn-primary">Check Device History</button>
+  </div>
   <div class="container my-4">
     <table class="table" id="myTable">
       <thead>
@@ -88,8 +96,8 @@
   </div>
   <hr>
   <?php 
-    include('includes/scripts.php');
     include('includes/footer.php');
+    include('includes/scripts.php');
 ?>  
     <!-- Optional JavaScript; choose one of the two! -->
 

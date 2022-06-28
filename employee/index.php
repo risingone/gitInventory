@@ -1,9 +1,15 @@
 
-
+<?php
+    session_start();
+    if(!isset($_SESSION['loggedin'])|| $_SESSION['loggedin']!=true){
+        header("location: ../login.php");
+        exit;
+    }
+?>
 <?php 
     include('includes/conn.php');
     include('includes/header.php');
-    include('includes/navbar.php');
+    // include('includes/navbar.php');
 ?>  
 
 <?php
@@ -35,7 +41,9 @@
   ?>
     
   <!-- Table -->
-  <button class="add btn btn-primary">Add Employee</button>
+  <div class="container my-4">
+        <button class="add btn btn-primary">Add Employee</button>
+  </div>
   <div class="container my-4">
     <table class="table" id="myTable">
       <thead>
@@ -74,9 +82,9 @@
     </table>
   </div>
   <hr>
-  <?php 
+  <?php
+    include('includes/footer.php'); 
     include('includes/scripts.php');
-    include('includes/footer.php');
 ?>  
     <!-- Optional JavaScript; choose one of the two! -->
 

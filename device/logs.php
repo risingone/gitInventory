@@ -1,7 +1,14 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['loggedin'])|| $_SESSION['loggedin']!=true){
+        header("location: ../login.php");
+        exit;
+    }
+?>
 <?php 
     include('logIncludes/conn.php');
     include('includes/header.php');
-    include('includes/navbar.php');
+    // include('includes/navbar.php');
 ?>
      <?php
      echo "<h3>History of Device ". $id ."</h3>";
@@ -37,6 +44,6 @@
   </div>
   <hr>
 <?php 
-    include('logIncludes/scripts.php');
     include('includes/footer.php');
+    include('logIncludes/scripts.php');
 ?>  
